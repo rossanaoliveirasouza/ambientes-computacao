@@ -13,3 +13,4 @@ Certifique-se de que você possui o Python instalado. Para rodar o programa, uti
 python needleman_wunsch.py
 ```
 ## Funcionamento do algoritmo
+ explicar aqui...
