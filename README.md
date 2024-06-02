@@ -1,3 +1,7 @@
+## Este é um trabalho apresentado à disciplina de Ambientes em Computação do programa de blá blá ...
+alunos: Fabiano, Helena, Rossana e Thaiane
+algoritmo implementado: Algoritmo de sequênciamento de Needleman Wunch
+
 ## Como baixar e rodar o repositório
 
 Para baixar e rodar o repositório, siga os seguintes passos:
@@ -8,3 +12,4 @@ Certifique-se de que você possui o Python instalado. Para rodar o programa, uti
 ```sh 
 python needleman_wunsch.py
 ```
+## Funcionamento do algoritmo
