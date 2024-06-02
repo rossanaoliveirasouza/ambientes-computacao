@@ -1,5 +1,6 @@
 ## Este é um trabalho apresentado à disciplina de Ambientes em Computação do programa de blá blá ...
 alunos: Fabiano, Helena, Rossana e Thaiane
+
 algoritmo implementado: Algoritmo de sequênciamento de Needleman Wunch
 
 ## Como baixar e rodar o repositório
