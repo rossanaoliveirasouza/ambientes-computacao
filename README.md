@@ -14,3 +14,5 @@ python needleman_wunsch.py
 ```
 ## Funcionamento do algoritmo
  explicar aqui...
+
+
