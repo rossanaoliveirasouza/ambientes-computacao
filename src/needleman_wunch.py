@@ -90,8 +90,25 @@ def needleman_wunsch(seq1, seq2, igual=5, diferente=-2, lacuna=-6):
 
 ########################################################################################################
 
-    print("Alinhamento 1:", alinhamento_1)
-    print("Alinhamento 2:", dalinhamento_2)
+    print("Resultado do alinhamento da sequência 1:", alinhamento_1)
+    print("Resultado do alinhamento da sequência 2:", dalinhamento_2)
+
+########################################################################################################
+
+    # calculo da identidade do alinhamento
+    seq1 = alinhamento_1
+    seq2 = dalinhamento_2
+
+    tam_seq = len(seq1)
+    cont = 0
+
+    for i in range(tam_seq):
+        if seq1[i] == seq2[i]:
+            cont = cont + 1
+        
+    # identidade: refere-se à presença do mesmo nucleotídeo ou aminoácido na mesma posição em duas sequências alinhadas
+    identidade = cont/tam_seq*100
+    print(f'Identidade: {identidade}%')
 
 ########################################################################################################
 
