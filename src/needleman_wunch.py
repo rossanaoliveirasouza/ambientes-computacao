@@ -48,7 +48,7 @@ def needleman_wunsch(seq1, seq2, igual=5, diferente=-2, lacuna=-6):
 ########################################################################################################
 
     # Rastreamento (Backtracking)
-    alinhamento_1, dalinhamento_2 = "", "" # inicializa as variáveis de alinhamento 1 e 2
+    alinhamento_1, alinhamento_2 = "", "" # inicializa as variáveis de alinhamento 1 e 2
 
     # para cada linha de linhas e para cada coluna de colunas
     linha, coluna = linhas - 1, colunas - 1 
@@ -62,7 +62,7 @@ def needleman_wunsch(seq1, seq2, igual=5, diferente=-2, lacuna=-6):
             
             # adiciona os caracteres correspondentes das sequências seq1 e seq2 às strings de alinhamento.
             alinhamento_1 = seq1[linha-1] + alinhamento_1
-            dalinhamento_2 = seq2[coluna-1] + dalinhamento_2
+            alinhamento_2 = seq2[coluna-1] + alinhamento_2
 
             # move os índices linha e coluna para a posição da diagonal superior esquerda na matriz.
             linha -= 1
@@ -73,7 +73,7 @@ def needleman_wunsch(seq1, seq2, igual=5, diferente=-2, lacuna=-6):
         elif matriz[linha][coluna] == matriz[linha-1][coluna] + lacuna:
             #Adiciona um caractere de lacuna à sequência seq1 e um caractere correspondente de seq2 à string de alinhamento.
             alinhamento_1 = seq1[linha-1] + alinhamento_1
-            dalinhamento_2 = "-" + dalinhamento_2
+            alinhamento_2 = "-" + alinhamento_2
 
             # move o índice linha, caminhando para cima na matriz
             linha -= 1
@@ -83,7 +83,7 @@ def needleman_wunsch(seq1, seq2, igual=5, diferente=-2, lacuna=-6):
         else:
             # Adiciona um caractere de lacuna à sequência seq2 e um caractere correspondente de seq1 à string de alinhamento.
             alinhamento_1 = "-" + alinhamento_1
-            dalinhamento_2 = seq2[coluna-1] + dalinhamento_2
+            alinhamento_2 = seq2[coluna-1] + alinhamento_2
 
             # move o índice coluna, caminhando para a esquerda na matriz
             coluna -= 1
@@ -91,13 +91,13 @@ def needleman_wunsch(seq1, seq2, igual=5, diferente=-2, lacuna=-6):
 ########################################################################################################
 
     print("Resultado do alinhamento da sequência 1:", alinhamento_1)
-    print("Resultado do alinhamento da sequência 2:", dalinhamento_2)
+    print("Resultado do alinhamento da sequência 2:", alinhamento_2)
 
 ########################################################################################################
 
     # calculo da identidade do alinhamento
     seq1 = alinhamento_1
-    seq2 = dalinhamento_2
+    seq2 = alinhamento_2
 
     tam_seq = len(seq1)
     cont = 0
